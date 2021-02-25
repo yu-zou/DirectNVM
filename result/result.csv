@@ -1,0 +1,13 @@
+Benchmark,# Threads,Queue Depth,Block Size,Type,IOPS,BW (MB/s)
+seqread,1,64,4k,spdk,260k,1014
+seqwrite,1,64,4k,spdk,243k,948
+randread,1,64,4k,spdk,248k,969
+randwrite,1,64,4k,spdk,239k,934
+seqread,1,64,4k,kernel,42.2k,165
+seqwrite,1,64,4k,kernel,16.3k,63.8
+randread,1,64,4k,kernel,36.6k,143
+randwrite,1,64,4k,kernel,11k,42
+seqread,1,64,4k,directnvm,,1529.8
+seqwrite,1,64,4k,directnvm,,1515.6
+randread,1,64,4k,directnvm,,437.2
+randwrite,1,64,4k,directnvm,,1520.2

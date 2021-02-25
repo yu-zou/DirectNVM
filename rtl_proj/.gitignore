@@ -1,0 +1,11 @@
+/*
+!/bd/
+!/bitstream/
+!/hdl/
+!/script/
+!/sim_cfg/
+!/testbench/
+!/constraint/
+!/ip_repo/
+!/.gitignore
+!/.sdk/

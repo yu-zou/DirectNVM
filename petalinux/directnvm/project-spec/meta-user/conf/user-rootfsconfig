@@ -1,0 +1,14 @@
+#Note: Mention Each package in individual line
+#These packages will get added into rootfs menu entry
+
+CONFIG_gpio-demo
+CONFIG_peekpoke
+CONFIG_u-dma-buf
+CONFIG_nvmedl-admin
+CONFIG_pciectrl
+CONFIG_nvmectrl
+CONFIG_cmdscheduler0
+CONFIG_cmdscheduler1
+CONFIG_cmdscheduler2
+CONFIG_cmdscheduler3
+CONFIG_mymodule

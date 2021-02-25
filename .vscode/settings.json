@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.cu": "cpp",
+		"*.cuh": "cpp",
+		"nvmed_context.h": "c"
+	}
+}

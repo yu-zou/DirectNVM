@@ -1,0 +1,3305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>design_1_CompletionQueueManag_3_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>M00_AXI_LITE</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:master>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="M00_AXI_LITE">
+          <spirit:baseAddress spirit:format="long">0x00000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
+      </spirit:master>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.DATA_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.PROTOCOL">AXI4LITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.FREQ_HZ">250000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.ADDR_WIDTH">64</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_LOCK">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_CACHE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_QOS">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_REGION">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.MAX_BURST_LENGTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_FULL</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI_FULL"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWLEN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awlen</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWSIZE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awsize</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWBURST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awburst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWLOCK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awlock</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWCACHE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awcache</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREGION</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awregion</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWQOS</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awqos</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awuser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wuser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_bid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_buser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARLEN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arlen</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARSIZE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arsize</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARBURST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arburst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARLOCK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arlock</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARCACHE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arcache</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREGION</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arregion</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARQOS</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arqos</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_aruser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_ruser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_MEMORY_SIZE</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.WIZ_MEMORY_SIZE" spirit:choiceRef="choice_list_ac3b832e">64</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.DATA_WIDTH">128</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.PROTOCOL">AXI4</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.FREQ_HZ">250000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.ADDR_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_BURST">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_LOCK">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_CACHE">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_QOS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_REGION">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_READ_OUTSTANDING">2</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_WRITE_OUTSTANDING">2</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.MAX_BURST_LENGTH">256</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M00_AXI_LITE_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M00_AXI_LITE_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axi_lite_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.ASSOCIATED_BUSIF">M00_AXI_LITE</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.ASSOCIATED_RESET">m00_axi_lite_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.FREQ_HZ">250000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_FULL_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_FULL_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_full_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.ASSOCIATED_BUSIF">S00_AXI_FULL</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.ASSOCIATED_RESET">s00_axi_full_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.FREQ_HZ">250000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.CLK_DOMAIN">design_1_xdma_0_0_axi_aclk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:addressSpaces>
+    <spirit:addressSpace>
+      <spirit:name>M00_AXI_LITE</spirit:name>
+      <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="0" spirit:maximum="4294967296" spirit:rangeType="long">16777216T</spirit:range>
+      <spirit:width spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH&apos;)) - 1) + 1">32</spirit:width>
+    </spirit:addressSpace>
+  </spirit:addressSpaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI_FULL</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_FULL_mem</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>memory</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_FULL.S00_AXI_FULL_MEM.OFFSET_BASE_PARAM">C_S00_AXI_FULL_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI_FULL.S00_AXI_FULL_MEM.OFFSET_HIGH_PARAM">C_S00_AXI_FULL_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>CompletionQueueManagement_v2_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Feb 19 20:15:32 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d80465ae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d80465ae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_CompletionQueueManag_3_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Feb 19 20:15:32 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d80465ae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>CompletionQueueManagement_v2_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Feb 19 20:15:32 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:160935a3</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_CompletionQueueManag_3_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Feb 19 20:15:32 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:160935a3</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Feb 19 20:24:32 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d80465ae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>num_cmds_to_wait</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>go</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>async_clear</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH&apos;)) - 1)">63</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH&apos;)) - 1)">63</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axi_lite_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_awid" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awlen</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awsize</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awburst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awlock</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awcache</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awqos</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awregion</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_awuser" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_DATA_WIDTH&apos;)) - 1)">127</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_DATA_WIDTH&apos;)) / 8) - 1)">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_wuser" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_bid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_bid" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_buser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_buser" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_arid" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arlen</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arsize</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arburst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arlock</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arcache</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arqos</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arregion</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_aruser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_aruser" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_rid" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_DATA_WIDTH&apos;)) - 1)">127</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_ruser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s00_axi_full_ruser" xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH&apos;)) >0">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_full_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector">
+        <spirit:name>C_M00_AXI_LITE_TARGET_SLAVE_BASE_ADDR</spirit:name>
+        <spirit:displayName>C M00 AXI LITE TARGET SLAVE BASE ADDR</spirit:displayName>
+        <spirit:description>The master requires a target slave base address.
+    // The master will initiate read and write transactions on the slave with base address specified here as a parameter.</spirit:description>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_LITE_TARGET_SLAVE_BASE_ADDR" spirit:order="4" spirit:bitStringLength="64">0x00000000A0001024</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_LITE_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C M00 AXI LITE ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of M_AXI address bus. 
+    // The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH" spirit:order="5" spirit:rangeType="long">64</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_LITE_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C M00 AXI LITE DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of M_AXI data bus. 
+    // The master issues write data and accept read data where the width of the data bus is C_M_AXI_DATA_WIDTH</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH" spirit:order="6" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_ID_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL ID WIDTH</spirit:displayName>
+        <spirit:description>Width of ID for for write address, write data, read address and read data</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH&apos;))))" spirit:order="8" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_DATA_WIDTH" spirit:order="9" spirit:rangeType="long">128</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_ADDR_WIDTH" spirit:order="10" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_AWUSER_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL AWUSER WIDTH</spirit:displayName>
+        <spirit:description>Width of optional user defined signal in write address channel</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH&apos;))))" spirit:order="11" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_ARUSER_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL ARUSER WIDTH</spirit:displayName>
+        <spirit:description>Width of optional user defined signal in read address channel</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH&apos;))))" spirit:order="12" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_WUSER_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL WUSER WIDTH</spirit:displayName>
+        <spirit:description>Width of optional user defined signal in write data channel</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH&apos;))))" spirit:order="13" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_RUSER_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL RUSER WIDTH</spirit:displayName>
+        <spirit:description>Width of optional user defined signal in read data channel</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH&apos;))))" spirit:order="14" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_FULL_BUSER_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI FULL BUSER WIDTH</spirit:displayName>
+        <spirit:description>Width of optional user defined signal in write response channel</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH" spirit:dependency="((spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH&apos;)) &lt;= 0 ) + (spirit:decode(id(&apos;PARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH&apos;))))" spirit:order="15" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CPL_ENTRY_DATA_WIDTH</spirit:name>
+        <spirit:displayName>Cpl Entry Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPL_ENTRY_DATA_WIDTH">128</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CPL_ENTRY_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>Cpl Entry Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CPL_ENTRY_ADDR_WIDTH">5</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_0132492a</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:enumeration>64</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ac3b832e</spirit:name>
+      <spirit:enumeration>64</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
+      <spirit:enumeration>256</spirit:enumeration>
+      <spirit:enumeration>512</spirit:enumeration>
+      <spirit:enumeration>1024</spirit:enumeration>
+      <spirit:enumeration>2048</spirit:enumeration>
+      <spirit:enumeration>4096</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0_M00_AXI_LITE.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0_S00_AXI_FULL.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/design_1_CompletionQueueManag_3_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0_M00_AXI_LITE.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0_S00_AXI_FULL.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0e4c/hdl/CompletionQueueManagement_v2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/design_1_CompletionQueueManag_3_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>design_1_CompletionQueueManag_3_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_CompletionQueueManag_3_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_CompletionQueueManag_3_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_CompletionQueueManag_3_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_CompletionQueueManag_3_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Completion queue management</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_LITE_TARGET_SLAVE_BASE_ADDR</spirit:name>
+      <spirit:displayName>C M00 AXI LITE TARGET SLAVE BASE ADDR</spirit:displayName>
+      <spirit:description>The master requires a target slave base address.
+    // The master will initiate read and write transactions on the slave with base address specified here as a parameter.</spirit:description>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_LITE_TARGET_SLAVE_BASE_ADDR" spirit:order="4" spirit:bitStringLength="64">0x00000000A0001024</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_LITE_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C M00 AXI LITE ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of M_AXI address bus. 
+    // The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH" spirit:order="5" spirit:rangeType="long">64</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_M00_AXI_LITE_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_LITE_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C M00 AXI LITE DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of M_AXI data bus. 
+    // The master issues write data and accept read data where the width of the data bus is C_M_AXI_DATA_WIDTH</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_LITE_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="6">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_M00_AXI_LITE_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_ID_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL ID WIDTH</spirit:displayName>
+      <spirit:description>Width of ID for for write address, write data, read address and read data</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH" spirit:order="8" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_DATA_WIDTH" spirit:choiceRef="choice_list_0132492a" spirit:order="9">128</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_FULL_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_ADDR_WIDTH" spirit:order="10" spirit:rangeType="long">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_FULL_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_AWUSER_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL AWUSER WIDTH</spirit:displayName>
+      <spirit:description>Width of optional user defined signal in write address channel</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH" spirit:order="11" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_ARUSER_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL ARUSER WIDTH</spirit:displayName>
+      <spirit:description>Width of optional user defined signal in read address channel</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH" spirit:order="12" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_WUSER_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL WUSER WIDTH</spirit:displayName>
+      <spirit:description>Width of optional user defined signal in write data channel</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH" spirit:order="13" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_RUSER_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL RUSER WIDTH</spirit:displayName>
+      <spirit:description>Width of optional user defined signal in read data channel</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH" spirit:order="14" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_BUSER_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI FULL BUSER WIDTH</spirit:displayName>
+      <spirit:description>Width of optional user defined signal in write response channel</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH" spirit:order="15" spirit:minimum="0" spirit:maximum="1024" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI FULL BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_BASEADDR" spirit:order="16" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_FULL_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_FULL_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI FULL HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_FULL_HIGHADDR" spirit:order="17" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_FULL_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_CompletionQueueManag_3_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CPL_ENTRY_DATA_WIDTH</spirit:name>
+      <spirit:displayName>Cpl Entry Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CPL_ENTRY_DATA_WIDTH">128</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CPL_ENTRY_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>Cpl Entry Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CPL_ENTRY_ADDR_WIDTH">5</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>CompletionQueueManagement_v2.0</xilinx:displayName>
+      <xilinx:coreRevision>33</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36fbc37a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77b51ece_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@223ebf76_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b8af58_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42f8cbb9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b45a599_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cd5cc6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d70237e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@591970f8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df34d4c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79f042e3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@360670dc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc6bbbb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26800cbb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@88f3041_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23935162_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25c61b41_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a72d80_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d49fc86_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a0c61a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2286b47b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5393fac8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201a3155_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ec4b17_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122fca37_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57875159_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a401db1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d1352d_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@696b4c91_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a3265b7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b076f19_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@466499f4_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@254e643e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb60f94_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a164ab_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b8cee00_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a54ec7c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a2f7a1a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c3abe00_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d58486e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec67309_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1670cad6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a04fc1f_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0b6289_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68dec7cf_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37761911_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30bf3c62_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3abe66a9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31ea6c66_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7464b8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7a1c86_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ed71fd_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e49b194_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c8a9e73_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d320962_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79857136_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eabcdf3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60eaa3af_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c9ef3c0_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79dddcc9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68adddca_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4403c513_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da29ee8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@207468ad_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47222fcc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f95c7b2_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e6d4c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5130e396_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54db83ef_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df86f0d_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a2dc1a1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677ffdaf_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12e95539_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@284c4fdc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78228950_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ba0811e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e6f0c7c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6691e457_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3581a9c1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@267c2dd8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4348785b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c35276_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2adb84a1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40022274_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f04902_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@202cfd71_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdae56b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f4221ad_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118d2f9c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c839f2a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d559b96_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d9b5dc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5315a754_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a238a15_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@327c3826_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f96c6e4_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59c8f60f_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74d34ae1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e81eee_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3849cfec_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ccfeada_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8087c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfbbff7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674d174b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bad73a9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddb2e04_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d7f012a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37655760_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337b5b43_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a6c689_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c650e40_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d98527_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394b0d5e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417be1cc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b851d16_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62965118_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3764758c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71894434_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b88292f_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3626ecfb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1586a6e5_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fb5ceda_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4994ae70_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c41db6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16ea6dbc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@661f6adf_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f4d87fa_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eafc3d5_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84a168f_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ee66a3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da58479_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4faa49a1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f515662_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d03d62_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f23c792_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d789fb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@704c04bc_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60bc7f62_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@213f82ff_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cded47d_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@659acac8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc88cf6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53a494e5_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47022d3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d2cffcf_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff86035_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c97d41a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8d77a7c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a111aa_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209dcdf_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@282d3f4e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e83e7ef_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bcc3576_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73435477_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66090168_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51c4844_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c34f032_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@239c3ac8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4402b235_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff22a3e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788653cd_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19af5e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10681b34_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23820d87_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fdd00a8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2984adc9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32db18f_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@462023d0_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c8d4208_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70acb748_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781a9c73_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f5c793d_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fbdd065_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@261084cd_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433bb5d7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5850688b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b5e1fed_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b634ae_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5836aaab_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f905246_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25e6e2ab_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1171c25a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4c08b7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa166ea_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ea7ab2_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4754b583_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b46f00d_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50b3ecd6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f90fdc5_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430cf410_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@483ab974_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37366b26_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d975535_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bcb0945_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@223ac059_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a7ac9d3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@391ffcb4_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@103ccde1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66bdd999_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce35ae7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aa0907b_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fec9fd2_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf17e28_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25ef8006_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@199518eb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4981d32e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1409cee1_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d18949e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65601883_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64b364b6_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f2d3a5_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d3a8c2e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ec43d87_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b514764_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e419c42_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17613c0a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c6d87f3_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7831e449_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@359780c9_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364a59c8_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a3cb8d2_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@694c2006_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f40f411_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d3a3d52_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fcfa2bb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b60c0e_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b21f725_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8c48cb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c489d7_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d06634_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d6de1c_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b5c9c31_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74531033_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75910d4a_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58dd1927_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f7316cb_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb88d48_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4af9ee19_ARCHIVE_LOCATION">/home/yzou/FDirectLink/ip_repo/CompletionQueueManagement_2.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.MAX_BURST_LENGTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.WIZ_DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_CLK.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_LITE_RST.POLARITY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.ARUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.AWUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.BUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.ID_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.RUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.WIZ_DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.WIZ_MEMORY_SIZE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL.WUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_CLK.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_FULL_RST.POLARITY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CPL_ENTRY_ADDR_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_M00_AXI_LITE_ADDR_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_M00_AXI_LITE_TARGET_SLAVE_BASE_ADDR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_ARUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_AWUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_BUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_RUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S00_AXI_FULL_WUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="6911ade9"/>
+      <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="10130582"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="1bd4e68d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="249f43e6"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="bd48bbb2"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="dc73805b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="e798359f"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

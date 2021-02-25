@@ -1,0 +1,116 @@
+/include/ "system-conf.dtsi"
+/ {
+	/* Pre-allocated DMA buffers */
+	udmabuf@0x00 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "reqbuf0";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x01 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "databuf0";
+		size = <0x00080000>;
+		dma-coherent;
+	};
+	udmabuf@0x02 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "reqbuf1";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x03 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "databuf1";
+		size = <0x00080000>;
+		dma-coherent;
+	};
+	udmabuf@0x04 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "reqbuf2";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x05 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "databuf2";
+		size = <0x00080000>;
+		dma-coherent;
+	};
+	udmabuf@0x06 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "reqbuf3";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x07 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "databuf3";
+		size = <0x00080000>;
+		dma-coherent;
+	};
+	udmabuf@0x08 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "adatabuf";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x09 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "asubbuf";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	udmabuf@0x0A {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "acplbuf";
+		size = <0x00001000>;
+		dma-coherent;
+	};
+	/* Memory-mapped NVMe/PCIe control registers */
+	pciectrl@400000000 {
+		compatible = "directnvm,pciectrl";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		reg = <0x4 0x00000000 0x0 0x20000000>;
+	};
+	nvmectrl@A0000000 {
+		compatible = "directnvm,nvmectrl";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		reg = <0x0 0xA0000000 0x0 0x10000000>;
+	};
+	/* Memory-mapped CmdScheduler registers */
+	/* Don't know how to associate single platform driver with multiple devices
+	 * So I create 4 platform drivers for the 4 instantiations, not elegant!!!
+	 * TODO: make this more elegant!
+	 */
+	cmdscheduler@420000000 {
+		compatible = "directnvm,cmdscheduler0";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		device-name = "cmdscheduler0";
+		reg = <0x4 0x20000000 0x0 0x1000>;
+	};
+	cmdscheduler@420001000 {
+		compatible = "directnvm,cmdscheduler1";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		device-name = "cmdscheduler1";
+		reg = <0x4 0x20001000 0x0 0x1000>;
+	};
+	cmdscheduler@420002000 {
+		compatible = "directnvm,cmdscheduler2";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		device-name = "cmdscheduler2";
+		reg = <0x4 0x20002000 0x0 0x1000>;
+	};
+	cmdscheduler@420003000 {
+		compatible = "directnvm,cmdscheduler3";
+		#address-cells = <2>;
+		#size-cells = <2>;
+		device-name = "cmdscheduler3";
+		reg = <0x4 0x20003000 0x0 0x1000>;
+	};
+};

@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER CmdScheduler
+	OPTION supported_peripherals = (CmdScheduler);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = CmdScheduler;
+END DRIVER
